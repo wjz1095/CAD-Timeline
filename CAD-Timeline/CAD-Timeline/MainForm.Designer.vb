@@ -33,6 +33,8 @@ Partial Class MainForm
         '
         'InputTextBox
         '
+        Me.InputTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.InputTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.InputTextBox.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.InputTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.InputTextBox.Location = New System.Drawing.Point(0, 557)
