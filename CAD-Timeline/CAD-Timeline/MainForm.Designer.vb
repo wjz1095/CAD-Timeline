@@ -46,11 +46,12 @@ Partial Class MainForm
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DisplayTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DisplayTextBox.Location = New System.Drawing.Point(-12, -2)
+        Me.DisplayTextBox.Location = New System.Drawing.Point(0, 37)
         Me.DisplayTextBox.Multiline = True
         Me.DisplayTextBox.Name = "DisplayTextBox"
+        Me.DisplayTextBox.ReadOnly = True
         Me.DisplayTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.DisplayTextBox.Size = New System.Drawing.Size(866, 553)
+        Me.DisplayTextBox.Size = New System.Drawing.Size(854, 514)
         Me.DisplayTextBox.TabIndex = 2
         Me.DisplayTextBox.TabStop = False
         '

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "RTFC-CAD", "RTFC-CAD\RTFC-CAD.vbproj", "{D9962EB3-C0A3-453E-A1AF-6C3681D381A7}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CAD-Timeline", "CAD-Timeline\CAD-Timeline.vbproj", "{D9962EB3-C0A3-453E-A1AF-6C3681D381A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
