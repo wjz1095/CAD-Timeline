@@ -1,4 +1,5 @@
 # CAD Timeline
+[Download Latest Version Here](https://github.com/wjz1095/CAD-Timeline/releases)
 
 This program is designed to make it easy to track events regardless of the type of event.
 
