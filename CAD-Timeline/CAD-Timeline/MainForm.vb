@@ -1,5 +1,7 @@
 ﻿Public Class MainForm
 
+    Public appPath As String = Application.StartupPath()
+    Public UserInput2 As String = " "
 
     Private Sub MainForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Timer1.Start() ' Start the timer
@@ -7,13 +9,16 @@
 
         'When program launches, create file and insert BEGIN OF FILE string
         Dim appPath As String = Application.StartupPath()
-        appPath = appPath + "\STAMP-ENTRY " + System.DateTime.Now.ToString("MM-dd-yyyy") + ".txt"
+
+        UserInput2 = Me.Text
+
+        'Gets the date from the UserInputForm and the date is included in UserInput2
+        appPath = appPath + "\" + UserInput2 + ".txt"
         My.Computer.FileSystem.WriteAllText(appPath, Environment.NewLine + "File created at: " + appPath, True)
-        My.Computer.FileSystem.WriteAllText(appPath, Environment.NewLine + "------BEGIN OF FILE------ Time: " + TimeOfDay.ToString("HH:mm:ss") + "EST", True)
+        My.Computer.FileSystem.WriteAllText(appPath, Environment.NewLine + "------BEGIN OF FILE------  " + System.DateTime.Now.ToString("MM/dd/yyyy ") + TimeOfDay.ToString("HH:mm:ss") + " EST", True)
         DisplayTextBox.Text = "File created at: " + appPath
 
-        Me.Show()
-        MessageBox.Show("The Timestamper program will automatically create a .txt file in the directory: " + appPath + " The file will be named '" + "STAMP-ENTRY " + System.DateTime.Now.ToString("MM-dd-yyyy") + ".txt'", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        'MessageBox.Show("The Timestamper program will automatically create a .txt file in the directory: " + appPath + " The file will be named '" + "STAMP-ENTRY " + System.DateTime.Now.ToString("MM-dd-yyyy") + ".txt'", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
     Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
@@ -27,13 +32,14 @@
         Dim OutputString As String = ""
         If e.KeyCode = Keys.Enter Then
             If InputTextBox.Text <> "" Then ' If the text box is NOT empty then it will continue with appending to the text box
-                OutputString = System.DateTime.Now.ToString("MM/dd/yyyy ") + TimeOfDay.ToString("HH:mm:ss") + " EST   |   " + InputTextBox.Text
+                OutputString = System.DateTime.Now.ToString("MM/dd/yyyy ") + TimeOfDay.ToString("HH:mm:ss") + " EST  |  " + InputTextBox.Text
 
                 OutputString = OutputString.ToUpper()
                 DisplayTextBox.AppendText(Environment.NewLine + OutputString)
 
-                Dim appPath As String = Application.StartupPath()
-                appPath = appPath + "\STAMP-ENTRY " + System.DateTime.Now.ToString("MM-dd-yyyy") + ".txt"
+                appPath = Application.StartupPath()
+                appPath = appPath + "\" + UserInput2 + ".txt"
+
                 My.Computer.FileSystem.WriteAllText(appPath, Environment.NewLine + OutputString, True)
                 InputTextBox.Text = ""
             End If
@@ -47,8 +53,10 @@
             e.Cancel = True
         Else
             Dim appPath As String = Application.StartupPath()
-            appPath = appPath + "\STAMP-ENTRY " + System.DateTime.Now.ToString("MM-dd-yyyy") + ".txt"
-            My.Computer.FileSystem.WriteAllText(appPath, Environment.NewLine + "------END  OF  FILE------ Time:" + TimeOfDay.ToString("HH:mm:ss") + "EST", True)
+            appPath = appPath + "\" + UserInput2 + ".txt"
+            My.Computer.FileSystem.WriteAllText(appPath, Environment.NewLine + "------END  OF  FILE------" + System.DateTime.Now.ToString("MM/dd/yyyy ") + TimeOfDay.ToString("HH:mm:ss") + " EST", True)
+            appPath = ""
+            UserInput2 = ""
         End If
     End Sub
 End Class

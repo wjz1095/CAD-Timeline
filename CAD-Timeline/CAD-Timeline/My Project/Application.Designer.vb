@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.CAD_Timeline.MainForm
+            Me.MainForm = Global.CAD_Timeline.UserInputForm
         End Sub
     End Class
 End Namespace
