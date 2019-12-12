@@ -22,7 +22,6 @@ On launch, it will ask you for an incident name, it then creates a text file in 
 <br>
 <h4>Planned features:</h4>
 
-* A "New Incident" button that opens another window to make it easier to create a new incident
 * A button to bring you to the folder of the `.txt` file containing your entries so you can find it easier
 * A button to open the entries using Notepad.exe so the user can edit it
 * Have the main event display box just show the contents of the event file, and read from the file every time an entry is made so if a change is made externally it reflects inside the GUI

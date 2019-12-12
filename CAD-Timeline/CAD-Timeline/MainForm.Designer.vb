@@ -29,6 +29,7 @@ Partial Class MainForm
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.CurrentTimeLabel = New System.Windows.Forms.Label()
         Me.CurrentDateLabel = New System.Windows.Forms.Label()
+        Me.NewIncidentButton = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'InputTextBox
@@ -65,7 +66,7 @@ Partial Class MainForm
         Me.CurrentTimeLabel.AutoSize = True
         Me.CurrentTimeLabel.BackColor = System.Drawing.Color.LightCoral
         Me.CurrentTimeLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CurrentTimeLabel.Location = New System.Drawing.Point(12, 9)
+        Me.CurrentTimeLabel.Location = New System.Drawing.Point(92, 7)
         Me.CurrentTimeLabel.Name = "CurrentTimeLabel"
         Me.CurrentTimeLabel.Size = New System.Drawing.Size(104, 25)
         Me.CurrentTimeLabel.TabIndex = 2
@@ -76,11 +77,21 @@ Partial Class MainForm
         Me.CurrentDateLabel.AutoSize = True
         Me.CurrentDateLabel.BackColor = System.Drawing.Color.LightCoral
         Me.CurrentDateLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CurrentDateLabel.Location = New System.Drawing.Point(186, 9)
+        Me.CurrentDateLabel.Location = New System.Drawing.Point(266, 7)
         Me.CurrentDateLabel.Name = "CurrentDateLabel"
         Me.CurrentDateLabel.Size = New System.Drawing.Size(163, 25)
         Me.CurrentDateLabel.TabIndex = 3
         Me.CurrentDateLabel.Text = "March 2, 2018"
+        '
+        'NewIncidentButton
+        '
+        Me.NewIncidentButton.BackColor = System.Drawing.Color.GreenYellow
+        Me.NewIncidentButton.Location = New System.Drawing.Point(0, 3)
+        Me.NewIncidentButton.Name = "NewIncidentButton"
+        Me.NewIncidentButton.Size = New System.Drawing.Size(86, 31)
+        Me.NewIncidentButton.TabIndex = 4
+        Me.NewIncidentButton.Text = "New Incident"
+        Me.NewIncidentButton.UseVisualStyleBackColor = False
         '
         'MainForm
         '
@@ -88,6 +99,7 @@ Partial Class MainForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.ClientSize = New System.Drawing.Size(854, 577)
+        Me.Controls.Add(Me.NewIncidentButton)
         Me.Controls.Add(Me.InputTextBox)
         Me.Controls.Add(Me.CurrentDateLabel)
         Me.Controls.Add(Me.CurrentTimeLabel)
@@ -105,5 +117,6 @@ Partial Class MainForm
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents CurrentTimeLabel As System.Windows.Forms.Label
     Friend WithEvents CurrentDateLabel As System.Windows.Forms.Label
+    Friend WithEvents NewIncidentButton As System.Windows.Forms.Button
 
 End Class

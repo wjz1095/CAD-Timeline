@@ -1,4 +1,5 @@
 
 *.txt
 *.suo
-CAD-Timeline/CAD-Timeline/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+*.cache
+*.tmp

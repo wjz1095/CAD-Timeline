@@ -59,4 +59,11 @@
             UserInput2 = ""
         End If
     End Sub
+
+    Private Sub NewIncidentButton_Click(sender As Object, e As EventArgs) Handles NewIncidentButton.Click
+        'When this button is clicked, it opens a new version of the timestamper while leaving the current one running
+        Dim NewIncident As String = Application.ExecutablePath
+
+        Process.Start(NewIncident)
+    End Sub
 End Class
