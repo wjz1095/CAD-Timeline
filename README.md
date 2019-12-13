@@ -9,6 +9,8 @@ Very easy to use, lightweight, and portable with a size of 1MB and no installer!
 
 On launch, it will ask you for an incident name, it then creates a text file in the directory you run the .exe from; anything you enter into the entry box will be converted to capital letters and then saved to that text file.
 
+If you want to open a new incident, just click the green "New Incident" Button
+
 <br>
 <h4>Initial form when starting the program:</h4>
 
@@ -17,7 +19,7 @@ On launch, it will ask you for an incident name, it then creates a text file in 
 <br>
 <h4>Main entry form:</h4>
 
-![Main Entry Form](https://i.imgur.com/H2JkHFW.png)
+![Main Entry Form](https://i.imgur.com/Hott9hO.png)
 
 <br>
 <h4>Planned features:</h4>
