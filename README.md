@@ -3,7 +3,7 @@
 
 [VirusTotal Scan](https://www.virustotal.com/gui/file/c35fcc242faa59fedc3848c104e1ab0bc32e241773f95ad396a7a8a940df44b1/detection)
 
-This program is designed to make it easy to track events regardless of the type of event.
+This program is designed to make it easy to track events regardless of the type of event. It's by no means pretty, but it does its job and it does it well.
 
 Very easy to use, lightweight, and portable with a size of 1MB and no installer!
 
@@ -28,6 +28,8 @@ If you want to open a new incident, just click the green "New Incident" Button
 * A button to open the entries using Notepad.exe so the user can edit it
 * Have the main event display box just show the contents of the event file, and read from the file every time an entry is made so if a change is made externally it reflects inside the GUI
 * See if I can make the event file editable from within the GUI. Possibly taking the contents of the main event display box and overwriting it into the event file
+
+I'm always taking feedback and suggestions for new features, so if there's anything you'd like to see implemented, add a feature request under the Issues tab here https://github.com/wjz1095/CAD-Timeline/issues
 
 <br>
 <h4>Issues:</h4>
