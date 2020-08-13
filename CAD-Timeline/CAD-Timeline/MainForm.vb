@@ -66,4 +66,16 @@
 
         Process.Start(NewIncident)
     End Sub
+
+    Private Sub NightModeCheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles NightModeCheckBox.CheckedChanged
+        If NightModeCheckBox.Checked = True Then
+            DisplayTextBox.BackColor = Color.Black
+            DisplayTextBox.ForeColor = Color.White
+        End If
+
+        If NightModeCheckBox.Checked = False Then
+            DisplayTextBox.BackColor = Color.White
+            DisplayTextBox.ForeColor = Color.Black
+        End If
+    End Sub
 End Class

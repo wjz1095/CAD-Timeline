@@ -30,6 +30,8 @@ Partial Class MainForm
         Me.CurrentTimeLabel = New System.Windows.Forms.Label()
         Me.CurrentDateLabel = New System.Windows.Forms.Label()
         Me.NewIncidentButton = New System.Windows.Forms.Button()
+        Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
+        Me.NightModeCheckBox = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'InputTextBox
@@ -93,12 +95,29 @@ Partial Class MainForm
         Me.NewIncidentButton.Text = "New Incident"
         Me.NewIncidentButton.UseVisualStyleBackColor = False
         '
+        'ColorDialog1
+        '
+        Me.ColorDialog1.Color = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        '
+        'NightModeCheckBox
+        '
+        Me.NightModeCheckBox.AutoSize = True
+        Me.NightModeCheckBox.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.NightModeCheckBox.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.NightModeCheckBox.Location = New System.Drawing.Point(0, 540)
+        Me.NightModeCheckBox.Name = "NightModeCheckBox"
+        Me.NightModeCheckBox.Size = New System.Drawing.Size(854, 17)
+        Me.NightModeCheckBox.TabIndex = 5
+        Me.NightModeCheckBox.Text = "Night Mode"
+        Me.NightModeCheckBox.UseVisualStyleBackColor = True
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.ClientSize = New System.Drawing.Size(854, 577)
+        Me.Controls.Add(Me.NightModeCheckBox)
         Me.Controls.Add(Me.NewIncidentButton)
         Me.Controls.Add(Me.InputTextBox)
         Me.Controls.Add(Me.CurrentDateLabel)
@@ -118,5 +137,7 @@ Partial Class MainForm
     Friend WithEvents CurrentTimeLabel As System.Windows.Forms.Label
     Friend WithEvents CurrentDateLabel As System.Windows.Forms.Label
     Friend WithEvents NewIncidentButton As System.Windows.Forms.Button
+    Friend WithEvents ColorDialog1 As System.Windows.Forms.ColorDialog
+    Friend WithEvents NightModeCheckBox As System.Windows.Forms.CheckBox
 
 End Class
