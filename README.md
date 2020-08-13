@@ -1,7 +1,7 @@
 # CAD Timeline
 [Download Latest Version Here](https://github.com/wjz1095/CAD-Timeline/releases)
 
-[VirusTotal Scan](https://www.virustotal.com/gui/file/c35fcc242faa59fedc3848c104e1ab0bc32e241773f95ad396a7a8a940df44b1/detection)
+[VirusTotal Scan](https://www.virustotal.com/gui/file/4c80662826916ae9604b001e8554d75339689b3ecb13f4b321b83d739409e8a1/detection)
 
 This program is designed to make it easy to track events regardless of the type of event. It's by no means pretty, but it does its job and it does it well.
 
@@ -9,7 +9,20 @@ Very easy to use, lightweight, and portable with a size of 1MB and no installer!
 
 On launch, it will ask you for an incident name, it then creates a text file in the directory you run the .exe from; anything you enter into the entry box will be converted to capital letters and then saved to that text file.
 
-If you want to open a new incident, just click the green "New Incident" Button
+If you want to open a new incident, just click the green "New Incident" Button. It will open a new instance of the Timeline for you.
+
+Closing one window will not close them all, so open and close as many as you want (within reason).
+
+Font color and size are now adjustable at the top right of the Timeline for your pleasure.
+
+<br>
+
+<b>Requirements:</b>
+* Windows 10 or newer
+* 2MB RAM
+* Screen resolution of 1000 x 600 or greater
+* The ability to read
+* Your first born child
 
 <br>
 <h4>Initial form when starting the program:</h4>
@@ -19,7 +32,7 @@ If you want to open a new incident, just click the green "New Incident" Button
 <br>
 <h4>Main entry form:</h4>
 
-![Main Entry Form](https://i.imgur.com/Hott9hO.png)
+![Main Entry Form](https://i.imgur.com/s3bfOj1.png)
 
 <br>
 <h4>Planned features:</h4>
