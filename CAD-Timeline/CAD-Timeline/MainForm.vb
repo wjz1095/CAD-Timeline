@@ -67,15 +67,60 @@
         Process.Start(NewIncident)
     End Sub
 
-    Private Sub NightModeCheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles NightModeCheckBox.CheckedChanged
-        If NightModeCheckBox.Checked = True Then
-            DisplayTextBox.BackColor = Color.Black
-            DisplayTextBox.ForeColor = Color.White
+
+    Private Sub TextColorButton_Click(sender As Object, e As EventArgs) Handles TextColorButton.Click
+
+        Dim cDialog As New ColorDialog()
+        cDialog.Color = DisplayTextBox.ForeColor
+
+        If (cDialog.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+            DisplayTextBox.ForeColor = cDialog.Color
         End If
 
-        If NightModeCheckBox.Checked = False Then
-            DisplayTextBox.BackColor = Color.White
-            DisplayTextBox.ForeColor = Color.Black
+    End Sub
+
+    Private Sub BackgroundColorButton_Click(sender As Object, e As EventArgs) Handles BackgroundColorButton.Click
+        Dim cDialog As New ColorDialog()
+        cDialog.Color = DisplayTextBox.BackColor
+
+        If (cDialog.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+            DisplayTextBox.BackColor = cDialog.Color
+        End If
+    End Sub
+
+    
+    Private Sub FontSizeTrackBar_Scroll(sender As Object, e As EventArgs) Handles FontSizeTrackBar.Scroll
+        If FontSizeTrackBar.Value = 0 Then
+            DisplayTextBox.Font = New Font("Microsoft Sans Serif", 6, FontStyle.Bold)
+            InputTextBox.Font = New Font("Microsoft Sans Serif", 6, FontStyle.Bold)
+        End If
+        If FontSizeTrackBar.Value = 1 Then
+            DisplayTextBox.Font = New Font("Microsoft Sans Serif", 7, FontStyle.Bold)
+            InputTextBox.Font = New Font("Microsoft Sans Serif", 7, FontStyle.Bold)
+        End If
+        If FontSizeTrackBar.Value = 2 Then
+            DisplayTextBox.Font = New Font("Microsoft Sans Serif", 8.25, FontStyle.Bold)
+            InputTextBox.Font = New Font("Microsoft Sans Serif", 8.25, FontStyle.Bold)
+        End If
+        If FontSizeTrackBar.Value = 3 Then
+            DisplayTextBox.Font = New Font("Microsoft Sans Serif", 12, FontStyle.Bold)
+            InputTextBox.Font = New Font("Microsoft Sans Serif", 12, FontStyle.Bold)
+        End If
+        If FontSizeTrackBar.Value = 4 Then
+            DisplayTextBox.Font = New Font("Microsoft Sans Serif", 16, FontStyle.Bold)
+            InputTextBox.Font = New Font("Microsoft Sans Serif", 16, FontStyle.Bold)
+        End If
+        If FontSizeTrackBar.Value = 5 Then
+            DisplayTextBox.Font = New Font("Microsoft Sans Serif", 20, FontStyle.Bold)
+            InputTextBox.Font = New Font("Microsoft Sans Serif", 20, FontStyle.Bold)
+        End If
+        If FontSizeTrackBar.Value = 6 Then
+            DisplayTextBox.Font = New Font("Microsoft Sans Serif", 24, FontStyle.Bold)
+            InputTextBox.Font = New Font("Microsoft Sans Serif", 24, FontStyle.Bold)
+        End If
+        If FontSizeTrackBar.Value = 7 Then
+            DisplayTextBox.Font = New Font("Microsoft Sans Serif", 28, FontStyle.Bold)
+            InputTextBox.Font = New Font("Microsoft Sans Serif", 28, FontStyle.Bold)
         End If
     End Sub
 End Class
