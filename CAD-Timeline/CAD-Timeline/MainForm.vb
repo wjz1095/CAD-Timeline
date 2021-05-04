@@ -68,24 +68,24 @@
     End Sub
 
 
-    Private Sub TextColorButton_Click(sender As Object, e As EventArgs) Handles TextColorButton.Click
+    Private Sub TextColorButton_Click(sender As Object, e As EventArgs)
 
-        Dim cDialog As New ColorDialog()
-        cDialog.Color = DisplayTextBox.ForeColor
+        'Dim cDialog As New ColorDialog()
+        'cDialog.Color = DisplayTextBox.ForeColor
 
-        If (cDialog.ShowDialog() = Windows.Forms.DialogResult.OK) Then
-            DisplayTextBox.ForeColor = cDialog.Color
-        End If
+        'If (cDialog.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+        'DisplayTextBox.ForeColor = cDialog.Color
+        'End If
 
     End Sub
 
-    Private Sub BackgroundColorButton_Click(sender As Object, e As EventArgs) Handles BackgroundColorButton.Click
-        Dim cDialog As New ColorDialog()
-        cDialog.Color = DisplayTextBox.BackColor
+    Private Sub BackgroundColorButton_Click(sender As Object, e As EventArgs)
+        ' Dim cDialog As New ColorDialog()
+        'cDialog.Color = DisplayTextBox.BackColor
 
-        If (cDialog.ShowDialog() = Windows.Forms.DialogResult.OK) Then
-            DisplayTextBox.BackColor = cDialog.Color
-        End If
+        'If (cDialog.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+        'DisplayTextBox.BackColor = cDialog.Color
+        'End If
     End Sub
 
     
@@ -122,5 +122,39 @@
             DisplayTextBox.Font = New Font("Microsoft Sans Serif", 28, FontStyle.Bold)
             InputTextBox.Font = New Font("Microsoft Sans Serif", 28, FontStyle.Bold)
         End If
+    End Sub
+
+
+    Private Sub TextColorToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles TextColorToolStripMenuItem1.Click
+        Dim cDialog As New ColorDialog()
+        cDialog.Color = DisplayTextBox.ForeColor
+
+        If (cDialog.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+            DisplayTextBox.ForeColor = cDialog.Color
+        End If
+    End Sub
+
+    Private Sub BackgroundColorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BackgroundColorToolStripMenuItem.Click
+        Dim cDialog As New ColorDialog()
+        cDialog.Color = DisplayTextBox.BackColor
+
+        If (cDialog.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+            DisplayTextBox.BackColor = cDialog.Color
+        End If
+    End Sub
+
+    Private Sub FlightRadar24ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FlightRadar24ToolStripMenuItem.Click
+        Dim webAddress As String = "https://www.flightradar24.com/40.56,-74.68/11"
+        Process.Start(webAddress)
+    End Sub
+
+    Private Sub GoogleMapsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GoogleMapsToolStripMenuItem.Click
+        Dim webAddress As String = "https://www.google.com/maps/@40.507796,-74.850641,13z"
+        Process.Start(webAddress)
+    End Sub
+
+    Private Sub IaRToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IaRToolStripMenuItem.Click
+        Dim webAddress As String = "https://dashboard.iamresponding.com/"
+        Process.Start(webAddress)
     End Sub
 End Class
