@@ -1,7 +1,7 @@
 # CAD Timeline
 [Download Latest Version Here](https://github.com/wjz1095/CAD-Timeline/releases)
 
-[VirusTotal Scan](https://www.virustotal.com/gui/file/4c80662826916ae9604b001e8554d75339689b3ecb13f4b321b83d739409e8a1/detection)
+[VirusTotal Scan](https://www.virustotal.com/gui/file/1af0c94fffed14f421a8254ee43df2861dad016de01d6e8c696ea4481ea2fb13/detection)
 
 This program is designed to make it easy to track events regardless of the type of event. It's by no means pretty, but it does its job and it does it well.
 
@@ -32,12 +32,11 @@ Font color and size are now adjustable at the top right of the Timeline for your
 <br>
 <h4>Main entry form:</h4>
 
-![Main Entry Form](https://i.imgur.com/s3bfOj1.png)
+![Main Entry Form](https://i.imgur.com/d6o7wAg.png)
 
 <br>
 <h4>Planned features:</h4>
 
-* A button to bring you to the folder of the `.txt` file containing your entries so you can find it easier
 * A button to open the entries using Notepad.exe so the user can edit it
 * Have the main event display box just show the contents of the event file, and read from the file every time an entry is made so if a change is made externally it reflects inside the GUI
 * See if I can make the event file editable from within the GUI. Possibly taking the contents of the main event display box and overwriting it into the event file
