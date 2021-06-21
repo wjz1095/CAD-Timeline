@@ -2,10 +2,16 @@
 
     Public appPath As String = Application.StartupPath()
     Public UserInput2 As String = " "
+    Private mswStartTime As New Stopwatch 'For elapsed time counting
 
     Private Sub MainForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'Start main timer and display current time on screen
+        Timer1.Interval = 1000
         Timer1.Start() ' Start the timer
         CurrentDateLabel.Text = System.DateTime.Now.ToString("dddd, MMMM dd yyyy") ' Show the date on the CurrentDateLabel on launch
+
+        'Get current time and store in variable, begin elapsed time counter
+        mswStartTime.Start()
 
         'When program launches, create file and insert BEGIN OF FILE string
         Dim appPath As String = Application.StartupPath()
@@ -25,6 +31,8 @@
         ' When the timer ticks, it updates the time display on the form, and the date
         CurrentTimeLabel.Text = TimeOfDay.ToString("HH:mm:ss") + "EST"
         CurrentDateLabel.Text = System.DateTime.Now.ToString("dddd, MMMM dd yyyy") ' This is here so if the program is open while the time ticks over to midnight, it will change the date as well
+        ElapsedTimeLabel.Text = mswStartTime.Elapsed.Hours.ToString("0#") & ":" & mswStartTime.Elapsed.Minutes.ToString("0#") & ":" & mswStartTime.Elapsed.Seconds.ToString("0#")
+
     End Sub
 
     ' When Enter is pressed, it will write the date and time along with the contents of the input text box to the display text box
@@ -57,6 +65,8 @@
             My.Computer.FileSystem.WriteAllText(appPath, Environment.NewLine + "------END  OF  FILE------" + System.DateTime.Now.ToString("MM/dd/yyyy ") + TimeOfDay.ToString("HH:mm:ss") + " EST", True)
             appPath = ""
             UserInput2 = ""
+            Timer1.Stop() 'Stop timer when form closes in the event it did not stop on its own
+            mswStartTime.Stop() 'Stop stopwatch as well
         End If
     End Sub
 

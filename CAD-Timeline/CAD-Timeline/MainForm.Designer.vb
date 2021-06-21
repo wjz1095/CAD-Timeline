@@ -34,13 +34,14 @@ Partial Class MainForm
         Me.FontSizeTrackBar = New System.Windows.Forms.TrackBar()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.TextColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TextColorToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BackgroundColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LinksToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FlightRadar24ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GoogleMapsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IaRToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TextColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TextColorToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BackgroundColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ElapsedTimeLabel = New System.Windows.Forms.Label()
         CType(Me.FontSizeTrackBar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -51,9 +52,10 @@ Partial Class MainForm
         Me.InputTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.InputTextBox.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.InputTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.InputTextBox.Location = New System.Drawing.Point(0, 535)
+        Me.InputTextBox.Location = New System.Drawing.Point(0, 997)
+        Me.InputTextBox.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.InputTextBox.Name = "InputTextBox"
-        Me.InputTextBox.Size = New System.Drawing.Size(934, 26)
+        Me.InputTextBox.Size = New System.Drawing.Size(1712, 39)
         Me.InputTextBox.TabIndex = 1
         '
         'DisplayTextBox
@@ -62,12 +64,13 @@ Partial Class MainForm
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DisplayTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DisplayTextBox.Location = New System.Drawing.Point(0, 37)
+        Me.DisplayTextBox.Location = New System.Drawing.Point(0, 68)
+        Me.DisplayTextBox.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.DisplayTextBox.Multiline = True
         Me.DisplayTextBox.Name = "DisplayTextBox"
         Me.DisplayTextBox.ReadOnly = True
         Me.DisplayTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.DisplayTextBox.Size = New System.Drawing.Size(934, 498)
+        Me.DisplayTextBox.Size = New System.Drawing.Size(1709, 916)
         Me.DisplayTextBox.TabIndex = 2
         Me.DisplayTextBox.TabStop = False
         '
@@ -79,9 +82,10 @@ Partial Class MainForm
         Me.CurrentTimeLabel.AutoSize = True
         Me.CurrentTimeLabel.BackColor = System.Drawing.Color.LightCoral
         Me.CurrentTimeLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CurrentTimeLabel.Location = New System.Drawing.Point(92, 7)
+        Me.CurrentTimeLabel.Location = New System.Drawing.Point(169, 13)
+        Me.CurrentTimeLabel.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.CurrentTimeLabel.Name = "CurrentTimeLabel"
-        Me.CurrentTimeLabel.Size = New System.Drawing.Size(104, 25)
+        Me.CurrentTimeLabel.Size = New System.Drawing.Size(172, 42)
         Me.CurrentTimeLabel.TabIndex = 2
         Me.CurrentTimeLabel.Text = "00:00:00"
         '
@@ -90,9 +94,10 @@ Partial Class MainForm
         Me.CurrentDateLabel.AutoSize = True
         Me.CurrentDateLabel.BackColor = System.Drawing.Color.LightCoral
         Me.CurrentDateLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CurrentDateLabel.Location = New System.Drawing.Point(241, 7)
+        Me.CurrentDateLabel.Location = New System.Drawing.Point(442, 13)
+        Me.CurrentDateLabel.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.CurrentDateLabel.Name = "CurrentDateLabel"
-        Me.CurrentDateLabel.Size = New System.Drawing.Size(342, 25)
+        Me.CurrentDateLabel.Size = New System.Drawing.Size(571, 42)
         Me.CurrentDateLabel.TabIndex = 3
         Me.CurrentDateLabel.Text = "Wednesday, February 28, 2021"
         '
@@ -100,8 +105,9 @@ Partial Class MainForm
         '
         Me.NewIncidentButton.BackColor = System.Drawing.Color.GreenYellow
         Me.NewIncidentButton.Location = New System.Drawing.Point(0, 0)
+        Me.NewIncidentButton.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.NewIncidentButton.Name = "NewIncidentButton"
-        Me.NewIncidentButton.Size = New System.Drawing.Size(86, 38)
+        Me.NewIncidentButton.Size = New System.Drawing.Size(158, 70)
         Me.NewIncidentButton.TabIndex = 4
         Me.NewIncidentButton.Text = "New Incident"
         Me.NewIncidentButton.UseVisualStyleBackColor = False
@@ -113,9 +119,10 @@ Partial Class MainForm
         'FontSizeTrackBar
         '
         Me.FontSizeTrackBar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.FontSizeTrackBar.Location = New System.Drawing.Point(829, 0)
+        Me.FontSizeTrackBar.Location = New System.Drawing.Point(1520, 0)
+        Me.FontSizeTrackBar.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.FontSizeTrackBar.Name = "FontSizeTrackBar"
-        Me.FontSizeTrackBar.Size = New System.Drawing.Size(104, 45)
+        Me.FontSizeTrackBar.Size = New System.Drawing.Size(191, 80)
         Me.FontSizeTrackBar.TabIndex = 8
         Me.FontSizeTrackBar.TabStop = False
         Me.FontSizeTrackBar.Value = 3
@@ -126,9 +133,10 @@ Partial Class MainForm
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label1.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label1.Location = New System.Drawing.Point(781, 12)
+        Me.Label1.Location = New System.Drawing.Point(1432, 22)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(54, 13)
+        Me.Label1.Size = New System.Drawing.Size(101, 25)
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "Font Size:"
         '
@@ -138,32 +146,12 @@ Partial Class MainForm
         Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
         Me.MenuStrip1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LinksToolStripMenuItem, Me.TextColorToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(628, 7)
+        Me.MenuStrip1.Location = New System.Drawing.Point(1151, 13)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(153, 24)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(11, 4, 0, 4)
+        Me.MenuStrip1.Size = New System.Drawing.Size(248, 37)
         Me.MenuStrip1.TabIndex = 10
         Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'TextColorToolStripMenuItem
-        '
-        Me.TextColorToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.TextColorToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TextColorToolStripMenuItem1, Me.BackgroundColorToolStripMenuItem})
-        Me.TextColorToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.TextColorToolStripMenuItem.Name = "TextColorToolStripMenuItem"
-        Me.TextColorToolStripMenuItem.Size = New System.Drawing.Size(97, 20)
-        Me.TextColorToolStripMenuItem.Text = "Customization"
-        '
-        'TextColorToolStripMenuItem1
-        '
-        Me.TextColorToolStripMenuItem1.Name = "TextColorToolStripMenuItem1"
-        Me.TextColorToolStripMenuItem1.Size = New System.Drawing.Size(172, 22)
-        Me.TextColorToolStripMenuItem1.Text = "Text Color"
-        '
-        'BackgroundColorToolStripMenuItem
-        '
-        Me.BackgroundColorToolStripMenuItem.Name = "BackgroundColorToolStripMenuItem"
-        Me.BackgroundColorToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
-        Me.BackgroundColorToolStripMenuItem.Text = "Background Color"
         '
         'LinksToolStripMenuItem
         '
@@ -172,33 +160,67 @@ Partial Class MainForm
         Me.LinksToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinksToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.LinksToolStripMenuItem.Name = "LinksToolStripMenuItem"
-        Me.LinksToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
+        Me.LinksToolStripMenuItem.Size = New System.Drawing.Size(75, 29)
         Me.LinksToolStripMenuItem.Text = "Links"
         '
         'FlightRadar24ToolStripMenuItem
         '
         Me.FlightRadar24ToolStripMenuItem.Name = "FlightRadar24ToolStripMenuItem"
-        Me.FlightRadar24ToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.FlightRadar24ToolStripMenuItem.Size = New System.Drawing.Size(219, 30)
         Me.FlightRadar24ToolStripMenuItem.Text = "FlightRadar24"
         '
         'GoogleMapsToolStripMenuItem
         '
         Me.GoogleMapsToolStripMenuItem.Name = "GoogleMapsToolStripMenuItem"
-        Me.GoogleMapsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.GoogleMapsToolStripMenuItem.Size = New System.Drawing.Size(219, 30)
         Me.GoogleMapsToolStripMenuItem.Text = "Google Maps"
         '
         'IaRToolStripMenuItem
         '
         Me.IaRToolStripMenuItem.Name = "IaRToolStripMenuItem"
-        Me.IaRToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.IaRToolStripMenuItem.Size = New System.Drawing.Size(219, 30)
         Me.IaRToolStripMenuItem.Text = "IaR"
+        '
+        'TextColorToolStripMenuItem
+        '
+        Me.TextColorToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.TextColorToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TextColorToolStripMenuItem1, Me.BackgroundColorToolStripMenuItem})
+        Me.TextColorToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.TextColorToolStripMenuItem.Name = "TextColorToolStripMenuItem"
+        Me.TextColorToolStripMenuItem.Size = New System.Drawing.Size(160, 29)
+        Me.TextColorToolStripMenuItem.Text = "Customization"
+        '
+        'TextColorToolStripMenuItem1
+        '
+        Me.TextColorToolStripMenuItem1.Name = "TextColorToolStripMenuItem1"
+        Me.TextColorToolStripMenuItem1.Size = New System.Drawing.Size(256, 30)
+        Me.TextColorToolStripMenuItem1.Text = "Text Color"
+        '
+        'BackgroundColorToolStripMenuItem
+        '
+        Me.BackgroundColorToolStripMenuItem.Name = "BackgroundColorToolStripMenuItem"
+        Me.BackgroundColorToolStripMenuItem.Size = New System.Drawing.Size(256, 30)
+        Me.BackgroundColorToolStripMenuItem.Text = "Background Color"
+        '
+        'ElapsedTimeLabel
+        '
+        Me.ElapsedTimeLabel.AutoSize = True
+        Me.ElapsedTimeLabel.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.ElapsedTimeLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.857143!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ElapsedTimeLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.ElapsedTimeLabel.Location = New System.Drawing.Point(12, 78)
+        Me.ElapsedTimeLabel.Name = "ElapsedTimeLabel"
+        Me.ElapsedTimeLabel.Size = New System.Drawing.Size(111, 29)
+        Me.ElapsedTimeLabel.TabIndex = 11
+        Me.ElapsedTimeLabel.Text = "00:00:00"
         '
         'MainForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ClientSize = New System.Drawing.Size(934, 561)
+        Me.ClientSize = New System.Drawing.Size(1712, 1036)
+        Me.Controls.Add(Me.ElapsedTimeLabel)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.NewIncidentButton)
         Me.Controls.Add(Me.InputTextBox)
@@ -209,7 +231,8 @@ Partial Class MainForm
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.MinimumSize = New System.Drawing.Size(950, 600)
+        Me.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.MinimumSize = New System.Drawing.Size(1722, 1054)
         Me.Name = "MainForm"
         Me.Text = "Timestamper"
         CType(Me.FontSizeTrackBar, System.ComponentModel.ISupportInitialize).EndInit()
@@ -236,5 +259,6 @@ Partial Class MainForm
     Friend WithEvents FlightRadar24ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents GoogleMapsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents IaRToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ElapsedTimeLabel As System.Windows.Forms.Label
 
 End Class
