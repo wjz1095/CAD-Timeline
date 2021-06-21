@@ -8,10 +8,10 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("RTFC-CAD")> 
+<Assembly: AssemblyTitle("CAD-TIMELINE")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("RTFC-CAD")> 
+<Assembly: AssemblyProduct("CAD-TIMELINE")> 
 <Assembly: AssemblyCopyright("Copyright ©  2018")> 
 <Assembly: AssemblyTrademark("")> 
 
