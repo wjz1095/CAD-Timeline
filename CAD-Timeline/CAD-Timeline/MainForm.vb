@@ -104,6 +104,8 @@
 
             appPath = ""
             UserInput2 = "" 'Set popup window for new incident to blank text box
+            Application.Exit()
+            End
         End If
     End Sub
 
