@@ -26,7 +26,7 @@
 
         'Start main timer and display current time on screen
         Timer1.Interval = 1000 'Timer interval to 1 second per tick
-        Timer1.Start() ' Start the timer
+        Timer1.Start() ' Start the timer, NOT the stopwatch, this is for the on screen current time display
         CurrentDateLabel.Text = System.DateTime.Now.ToString("dddd, MMMM dd yyyy") ' Show the date on the CurrentDateLabel on launch
 
         'Get current time and store in variable, begin elapsed time counter
@@ -85,7 +85,7 @@
 
     ' When attempting to close the form, it will ask and confirm if you want to close it instead of just closing
     Private Sub MainForm_Closing(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
-        If MessageBox.Show("Are you sure you want to close the timestamper?", "Timestamper Close Confirmation", MessageBoxButtons.YesNo) = DialogResult.No Then
+        If MessageBox.Show("Are you sure you want to close the program?", "Program Close Confirmation", MessageBoxButtons.YesNo) = DialogResult.No Then
             ' Cancel the Closing event from closing the form.
             e.Cancel = True
         Else
@@ -210,5 +210,53 @@
     Private Sub CurrentFileLocationToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CurrentFileLocationToolStripMenuItem.Click
         Dim appPath As String = Application.StartupPath()
         Process.Start(appPath)
+    End Sub
+
+    Private Sub StartTimerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StartTimerToolStripMenuItem.Click
+        'Start timer
+        mswStartTime.Start()
+        ElapsedTimeLabel.Text = mswStartTime.Elapsed.Hours.ToString("0#") & ":" & mswStartTime.Elapsed.Minutes.ToString("0#") & ":" & mswStartTime.Elapsed.Seconds.ToString("0#")
+    End Sub
+
+    Private Sub StopTimerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StopTimerToolStripMenuItem.Click
+        'Stop timer
+        'Update stopwatch label to show time
+        mswStartTime.Stop()
+        ElapsedTimeLabel.Text = mswStartTime.Elapsed.Hours.ToString("0#") & ":" & mswStartTime.Elapsed.Minutes.ToString("0#") & ":" & mswStartTime.Elapsed.Seconds.ToString("0#")
+    End Sub
+
+    Private Sub ResetTimerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetTimerToolStripMenuItem.Click
+        'Stop Timer
+        'Reset timer to 0
+        'Do NOT start timer back up
+        mswStartTime.Reset()
+        ElapsedTimeLabel.Text = mswStartTime.Elapsed.Hours.ToString("0#") & ":" & mswStartTime.Elapsed.Minutes.ToString("0#") & ":" & mswStartTime.Elapsed.Seconds.ToString("0#")
+    End Sub
+
+    Private Sub ClockTextColorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClockTextColorToolStripMenuItem.Click
+        Dim cDialog As New ColorDialog()
+        cDialog.Color = CurrentTimeLabel.ForeColor
+
+        If (cDialog.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+            CurrentTimeLabel.ForeColor = cDialog.Color
+            CurrentDateLabel.ForeColor = cDialog.Color
+            ElapsedTimeLabel.ForeColor = cDialog.Color
+        End If
+
+
+    End Sub
+
+    Private Sub ClockBGColorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClockBGColorToolStripMenuItem.Click
+        Dim cDialog As New ColorDialog()
+        cDialog.Color = CurrentTimeLabel.BackColor
+
+        If (cDialog.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+            CurrentTimeLabel.BackColor = cDialog.Color
+            CurrentDateLabel.BackColor = cDialog.Color
+            ElapsedTimeLabel.BackColor = cDialog.Color
+        End If
+
+
+
     End Sub
 End Class

@@ -35,16 +35,22 @@ Partial Class MainForm
         Me.Label1 = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.LinksToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CurrentFileLocationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FlightRadar24ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GoogleMapsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IaRToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OnlineStopwatchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OnlineStopwatch2ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TextColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TextColorToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.BackgroundColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ElapsedTimeLabel = New System.Windows.Forms.Label()
-        Me.OnlineStopwatchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OnlineStopwatch2ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CurrentFileLocationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TimerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StartTimerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StopTimerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ResetTimerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClockTextColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClockBGColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.FontSizeTrackBar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -97,7 +103,7 @@ Partial Class MainForm
         Me.CurrentDateLabel.AutoSize = True
         Me.CurrentDateLabel.BackColor = System.Drawing.Color.LightCoral
         Me.CurrentDateLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CurrentDateLabel.Location = New System.Drawing.Point(353, 13)
+        Me.CurrentDateLabel.Location = New System.Drawing.Point(369, 13)
         Me.CurrentDateLabel.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.CurrentDateLabel.Name = "CurrentDateLabel"
         Me.CurrentDateLabel.Size = New System.Drawing.Size(593, 42)
@@ -136,7 +142,7 @@ Partial Class MainForm
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label1.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label1.Location = New System.Drawing.Point(1432, 22)
+        Me.Label1.Location = New System.Drawing.Point(1426, 23)
         Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(101, 25)
@@ -148,11 +154,11 @@ Partial Class MainForm
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
         Me.MenuStrip1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LinksToolStripMenuItem, Me.TextColorToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(1151, 13)
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LinksToolStripMenuItem, Me.TimerToolStripMenuItem, Me.TextColorToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(1002, 13)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(11, 4, 0, 4)
-        Me.MenuStrip1.Size = New System.Drawing.Size(340, 37)
+        Me.MenuStrip1.Size = New System.Drawing.Size(418, 37)
         Me.MenuStrip1.TabIndex = 10
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -165,6 +171,12 @@ Partial Class MainForm
         Me.LinksToolStripMenuItem.Name = "LinksToolStripMenuItem"
         Me.LinksToolStripMenuItem.Size = New System.Drawing.Size(75, 29)
         Me.LinksToolStripMenuItem.Text = "Links"
+        '
+        'CurrentFileLocationToolStripMenuItem
+        '
+        Me.CurrentFileLocationToolStripMenuItem.Name = "CurrentFileLocationToolStripMenuItem"
+        Me.CurrentFileLocationToolStripMenuItem.Size = New System.Drawing.Size(284, 30)
+        Me.CurrentFileLocationToolStripMenuItem.Text = "Current File Location"
         '
         'FlightRadar24ToolStripMenuItem
         '
@@ -184,10 +196,22 @@ Partial Class MainForm
         Me.IaRToolStripMenuItem.Size = New System.Drawing.Size(284, 30)
         Me.IaRToolStripMenuItem.Text = "IaR"
         '
+        'OnlineStopwatchToolStripMenuItem
+        '
+        Me.OnlineStopwatchToolStripMenuItem.Name = "OnlineStopwatchToolStripMenuItem"
+        Me.OnlineStopwatchToolStripMenuItem.Size = New System.Drawing.Size(284, 30)
+        Me.OnlineStopwatchToolStripMenuItem.Text = "Online Stopwatch 1"
+        '
+        'OnlineStopwatch2ToolStripMenuItem
+        '
+        Me.OnlineStopwatch2ToolStripMenuItem.Name = "OnlineStopwatch2ToolStripMenuItem"
+        Me.OnlineStopwatch2ToolStripMenuItem.Size = New System.Drawing.Size(284, 30)
+        Me.OnlineStopwatch2ToolStripMenuItem.Text = "Online Stopwatch 2"
+        '
         'TextColorToolStripMenuItem
         '
         Me.TextColorToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.TextColorToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TextColorToolStripMenuItem1, Me.BackgroundColorToolStripMenuItem})
+        Me.TextColorToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TextColorToolStripMenuItem1, Me.BackgroundColorToolStripMenuItem, Me.ClockTextColorToolStripMenuItem, Me.ClockBGColorToolStripMenuItem})
         Me.TextColorToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.TextColorToolStripMenuItem.Name = "TextColorToolStripMenuItem"
         Me.TextColorToolStripMenuItem.Size = New System.Drawing.Size(160, 29)
@@ -196,13 +220,13 @@ Partial Class MainForm
         'TextColorToolStripMenuItem1
         '
         Me.TextColorToolStripMenuItem1.Name = "TextColorToolStripMenuItem1"
-        Me.TextColorToolStripMenuItem1.Size = New System.Drawing.Size(256, 30)
+        Me.TextColorToolStripMenuItem1.Size = New System.Drawing.Size(316, 30)
         Me.TextColorToolStripMenuItem1.Text = "Text Color"
         '
         'BackgroundColorToolStripMenuItem
         '
         Me.BackgroundColorToolStripMenuItem.Name = "BackgroundColorToolStripMenuItem"
-        Me.BackgroundColorToolStripMenuItem.Size = New System.Drawing.Size(256, 30)
+        Me.BackgroundColorToolStripMenuItem.Size = New System.Drawing.Size(316, 30)
         Me.BackgroundColorToolStripMenuItem.Text = "Background Color"
         '
         'ElapsedTimeLabel
@@ -217,23 +241,44 @@ Partial Class MainForm
         Me.ElapsedTimeLabel.TabIndex = 11
         Me.ElapsedTimeLabel.Text = "00:00:00"
         '
-        'OnlineStopwatchToolStripMenuItem
+        'TimerToolStripMenuItem
         '
-        Me.OnlineStopwatchToolStripMenuItem.Name = "OnlineStopwatchToolStripMenuItem"
-        Me.OnlineStopwatchToolStripMenuItem.Size = New System.Drawing.Size(284, 30)
-        Me.OnlineStopwatchToolStripMenuItem.Text = "Online Stopwatch 1"
+        Me.TimerToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.TimerToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StartTimerToolStripMenuItem, Me.StopTimerToolStripMenuItem, Me.ResetTimerToolStripMenuItem})
+        Me.TimerToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.TimerToolStripMenuItem.Name = "TimerToolStripMenuItem"
+        Me.TimerToolStripMenuItem.Size = New System.Drawing.Size(78, 29)
+        Me.TimerToolStripMenuItem.Text = "Timer"
         '
-        'OnlineStopwatch2ToolStripMenuItem
+        'StartTimerToolStripMenuItem
         '
-        Me.OnlineStopwatch2ToolStripMenuItem.Name = "OnlineStopwatch2ToolStripMenuItem"
-        Me.OnlineStopwatch2ToolStripMenuItem.Size = New System.Drawing.Size(284, 30)
-        Me.OnlineStopwatch2ToolStripMenuItem.Text = "Online Stopwatch 2"
+        Me.StartTimerToolStripMenuItem.Name = "StartTimerToolStripMenuItem"
+        Me.StartTimerToolStripMenuItem.Size = New System.Drawing.Size(274, 30)
+        Me.StartTimerToolStripMenuItem.Text = "Start/Resume Timer"
         '
-        'CurrentFileLocationToolStripMenuItem
+        'StopTimerToolStripMenuItem
         '
-        Me.CurrentFileLocationToolStripMenuItem.Name = "CurrentFileLocationToolStripMenuItem"
-        Me.CurrentFileLocationToolStripMenuItem.Size = New System.Drawing.Size(284, 30)
-        Me.CurrentFileLocationToolStripMenuItem.Text = "Current File Location"
+        Me.StopTimerToolStripMenuItem.Name = "StopTimerToolStripMenuItem"
+        Me.StopTimerToolStripMenuItem.Size = New System.Drawing.Size(274, 30)
+        Me.StopTimerToolStripMenuItem.Text = "Pause Timer"
+        '
+        'ResetTimerToolStripMenuItem
+        '
+        Me.ResetTimerToolStripMenuItem.Name = "ResetTimerToolStripMenuItem"
+        Me.ResetTimerToolStripMenuItem.Size = New System.Drawing.Size(274, 30)
+        Me.ResetTimerToolStripMenuItem.Text = "Stop/Reset Timer"
+        '
+        'ClockTextColorToolStripMenuItem
+        '
+        Me.ClockTextColorToolStripMenuItem.Name = "ClockTextColorToolStripMenuItem"
+        Me.ClockTextColorToolStripMenuItem.Size = New System.Drawing.Size(316, 30)
+        Me.ClockTextColorToolStripMenuItem.Text = "Clock Text Color"
+        '
+        'ClockBGColorToolStripMenuItem
+        '
+        Me.ClockBGColorToolStripMenuItem.Name = "ClockBGColorToolStripMenuItem"
+        Me.ClockBGColorToolStripMenuItem.Size = New System.Drawing.Size(316, 30)
+        Me.ClockBGColorToolStripMenuItem.Text = "Clock Background Color"
         '
         'MainForm
         '
@@ -284,5 +329,11 @@ Partial Class MainForm
     Friend WithEvents OnlineStopwatchToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents OnlineStopwatch2ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CurrentFileLocationToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TimerToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents StartTimerToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents StopTimerToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ResetTimerToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ClockTextColorToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ClockBGColorToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
