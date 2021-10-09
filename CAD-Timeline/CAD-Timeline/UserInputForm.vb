@@ -14,8 +14,13 @@
         Dim CustomFormat As String = System.DateTime.Now.ToString("yyyy-MMMM-dd")
 
 
+        If UserInput.Length < 1 Then
+            UserInput = "NOT SET BY USER"
+        End If
+
         'Show main form and set the title as the filename
         Dim Filename As String = CustomFormat + " - " + UserInput
+
         MainForm.Text = Filename
         MainForm.Show()
     End Sub

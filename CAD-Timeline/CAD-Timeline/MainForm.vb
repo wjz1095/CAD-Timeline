@@ -6,6 +6,7 @@
     Public currentTZ As String = localZone.StandardName 'Get current timezone
     Private mswStartTime As New Stopwatch 'For elapsed time counting
 
+
     Private Sub MainForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'Get and set timezone, write this to the appropriate locations
         Dim currentDate As DateTime = DateTime.Now
@@ -117,6 +118,9 @@
     End Sub
 
 
+    '----------------------------------------------------------------------------------------------------------------------------------
+    'Customization Tool Strip
+
     Private Sub FontSizeTrackBar_Scroll(sender As Object, e As EventArgs) Handles FontSizeTrackBar.Scroll
         If FontSizeTrackBar.Value = 0 Then
             DisplayTextBox.Font = New Font("Microsoft Sans Serif", 6, FontStyle.Bold)
@@ -160,7 +164,6 @@
         End If
     End Sub
 
-
     Private Sub TextColorToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles TextColorToolStripMenuItem1.Click
         Dim cDialog As New ColorDialog()
         cDialog.Color = DisplayTextBox.ForeColor
@@ -180,57 +183,6 @@
         If (cDialog.ShowDialog() = Windows.Forms.DialogResult.OK) Then
             DisplayTextBox.BackColor = cDialog.Color
         End If
-    End Sub
-
-    Private Sub FlightRadar24ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FlightRadar24ToolStripMenuItem.Click
-        Dim webAddress As String = "https://www.flightradar24.com/40.56,-74.68/11"
-        Process.Start(webAddress)
-    End Sub
-
-    Private Sub GoogleMapsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GoogleMapsToolStripMenuItem.Click
-        Dim webAddress As String = "https://www.google.com/maps/@40.507796,-74.850641,13z"
-        Process.Start(webAddress)
-    End Sub
-
-    Private Sub IaRToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IaRToolStripMenuItem.Click
-        Dim webAddress As String = "https://dashboard.iamresponding.com/"
-        Process.Start(webAddress)
-    End Sub
-
-    Private Sub OnlineStopwatchToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OnlineStopwatchToolStripMenuItem.Click
-        Dim webAddress As String = "https://www.timeanddate.com/stopwatch/"
-        Process.Start(webAddress)
-    End Sub
-
-    Private Sub OnlineStopwatch2ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OnlineStopwatch2ToolStripMenuItem.Click
-        Dim webAddress As String = "https://www.estopwatch.net/"
-        Process.Start(webAddress)
-    End Sub
-
-    Private Sub CurrentFileLocationToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CurrentFileLocationToolStripMenuItem.Click
-        Dim appPath As String = Application.StartupPath()
-        Process.Start(appPath)
-    End Sub
-
-    Private Sub StartTimerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StartTimerToolStripMenuItem.Click
-        'Start timer
-        mswStartTime.Start()
-        ElapsedTimeLabel.Text = mswStartTime.Elapsed.Hours.ToString("0#") & ":" & mswStartTime.Elapsed.Minutes.ToString("0#") & ":" & mswStartTime.Elapsed.Seconds.ToString("0#")
-    End Sub
-
-    Private Sub StopTimerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StopTimerToolStripMenuItem.Click
-        'Stop timer
-        'Update stopwatch label to show time
-        mswStartTime.Stop()
-        ElapsedTimeLabel.Text = mswStartTime.Elapsed.Hours.ToString("0#") & ":" & mswStartTime.Elapsed.Minutes.ToString("0#") & ":" & mswStartTime.Elapsed.Seconds.ToString("0#")
-    End Sub
-
-    Private Sub ResetTimerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetTimerToolStripMenuItem.Click
-        'Stop Timer
-        'Reset timer to 0
-        'Do NOT start timer back up
-        mswStartTime.Reset()
-        ElapsedTimeLabel.Text = mswStartTime.Elapsed.Hours.ToString("0#") & ":" & mswStartTime.Elapsed.Minutes.ToString("0#") & ":" & mswStartTime.Elapsed.Seconds.ToString("0#")
     End Sub
 
     Private Sub ClockTextColorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClockTextColorToolStripMenuItem.Click
@@ -259,4 +211,64 @@
 
 
     End Sub
+
+
+    '----------------------------------------------------------------------------------------------------------------------------------
+    'Links Tool Strip
+
+    Private Sub CurrentFileLocationToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CurrentFileLocationToolStripMenuItem.Click
+        Dim appPath As String = Application.StartupPath()
+        Process.Start(appPath)
+    End Sub
+
+    Private Sub FlightRadar24ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FlightRadar24ToolStripMenuItem.Click
+        Dim webAddress As String = "https://www.flightradar24.com/40.56,-74.68/11"
+        Process.Start(webAddress)
+    End Sub
+
+    Private Sub GoogleMapsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GoogleMapsToolStripMenuItem.Click
+        Dim webAddress As String = "https://www.google.com/maps/@40.507796,-74.850641,13z"
+        Process.Start(webAddress)
+    End Sub
+
+    Private Sub IaRToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IaRToolStripMenuItem.Click
+        Dim webAddress As String = "https://dashboard.iamresponding.com/"
+        Process.Start(webAddress)
+    End Sub
+
+    Private Sub NJHospitalStatusToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NJHospitalStatusToolStripMenuItem.Click
+        Dim webAddress As String = "https://njdivert.juvare.com/"
+        Process.Start(webAddress)
+    End Sub
+
+
+    Private Sub OnlineStopwatchToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OnlineStopwatchToolStripMenuItem.Click
+        Dim webAddress As String = "https://www.timeanddate.com/stopwatch/"
+        Process.Start(webAddress)
+    End Sub
+
+    Private Sub OnlineStopwatch2ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OnlineStopwatch2ToolStripMenuItem.Click
+        Dim webAddress As String = "https://www.estopwatch.net/"
+        Process.Start(webAddress)
+    End Sub
+
+
+
+
+    '----------------------------------------------------------------------------------------------------------------------------------
+    'Stopwatch/Timer Tool Strip
+
+    Private Sub StartTimerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StartTimerToolStripMenuItem.Click
+        'Start timer
+        mswStartTime.Start()
+        ElapsedTimeLabel.Text = mswStartTime.Elapsed.Hours.ToString("0#") & ":" & mswStartTime.Elapsed.Minutes.ToString("0#") & ":" & mswStartTime.Elapsed.Seconds.ToString("0#")
+    End Sub
+
+    Private Sub StopTimerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StopTimerToolStripMenuItem.Click
+        'Stop timer
+        'Update stopwatch label to show time
+        mswStartTime.Stop()
+        ElapsedTimeLabel.Text = mswStartTime.Elapsed.Hours.ToString("0#") & ":" & mswStartTime.Elapsed.Minutes.ToString("0#") & ":" & mswStartTime.Elapsed.Seconds.ToString("0#")
+    End Sub
+    
 End Class
