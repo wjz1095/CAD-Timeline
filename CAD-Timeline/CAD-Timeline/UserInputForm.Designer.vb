@@ -69,12 +69,12 @@ Partial Class UserInputForm
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.14286!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(238, 221)
+        Me.Label2.Location = New System.Drawing.Point(166, 219)
         Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(529, 39)
+        Me.Label2.Size = New System.Drawing.Size(630, 39)
         Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Illegal characters: < > : "" / \ | ? *"
+        Me.Label2.Text = "Illegal characters: #%&{}\<>*?/$!:@+=`|"
         '
         'UserInputForm
         '

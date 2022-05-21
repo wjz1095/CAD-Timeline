@@ -1,7 +1,7 @@
 ﻿Public Class UserInputForm
 
-
-    Public DisallowedCharacters As String = "!#$%&/()=?¡¿\/*´'~`{}^@<>;:_¨|°¬+-""[]^¨"
+    '
+    Public DisallowedCharacters As String = "#%&{}\<>*?/$!:@+=`|"
 
     'This form is for the "Enter Incident Name" textbox that appears on program launch
 
