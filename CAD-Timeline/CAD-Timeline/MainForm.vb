@@ -86,7 +86,7 @@
 
     ' When attempting to close the form, it will ask and confirm if you want to close it instead of just closing
     Private Sub MainForm_Closing(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
-        If MessageBox.Show("Are you sure you want to close the program?", "Program Close Confirmation", MessageBoxButtons.YesNo) = DialogResult.No Then
+        If MessageBox.Show("Are you sure you want to close the program?", "Close Confirmation", MessageBoxButtons.YesNo) = DialogResult.No Then
             ' Cancel the Closing event from closing the form.
             e.Cancel = True
         Else
